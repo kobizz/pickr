@@ -592,7 +592,7 @@ class Pickr {
 
             // Create new swatch HTMLElement
             const el = _.createElementFromString(
-                `<button type="button" style="color: ${color.toRGBA().toString(0)}" aria-label="color swatch"/>`
+                `<div class="pcr-swatch" style="color: ${color.toRGBA().toString(0)}" aria-label="color swatch"></div>`
             );
 
             // Append element and save swatch data
