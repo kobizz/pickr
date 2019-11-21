@@ -264,11 +264,7 @@ class Pickr {
                         lastColor.style.color = cssRGBaString;
                     }
 
-                    // Check if there's a swatch which color matches the current one
-                    const hexa = color.toHEXA().toString();
-                    for (const {el, color} of inst._swatchColors) {
-                        el.classList[hexa === color.toHEXA().toString() ? 'add' : 'remove']('pcr-active');
-                    }
+                    inst.activateSwatch();
 
                     // Change current color
                     currentColor.style.color = cssRGBaString;
@@ -632,6 +628,18 @@ class Pickr {
         }
 
         return false;
+    }
+
+    /**
+     * Check if there's a swatch which color matches the current one and activate it
+     */
+    activateSwatch() {
+        const color = this.getColor(),
+            hexa = color.toHEXA().toString();
+
+        for (const {el, color} of this._swatchColors) {
+            el.classList[hexa === color.toHEXA().toString() ? 'add' : 'remove']('pcr-active');
+        }
     }
 
     applyColor(silent = false) {
