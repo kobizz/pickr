@@ -17,13 +17,12 @@
     }
 }
 
-.pickr .pcr-button {
-    @include transparency-background;
+.pcr-button {
+    @include transparency-background(14px);
     display: block;
     position: relative;
     height: 100%;
     width: 100%;
-    border-radius: $border-radius-mid;
     transition: all 0.3s;
     cursor: pointer;
 
@@ -33,7 +32,6 @@
         width: 100%;
         transition: background 0.3s;
         background: currentColor;
-        border-radius: $border-radius-mid;
     }
 
     &.disabled {
@@ -50,11 +48,11 @@
         border: none;
         -webkit-appearance: none;
     }
+}
 
-    .pcr-palette,
-    .pcr-slider {
-        transition: box-shadow 0.3s;
-    }
+.pcr-palette,
+.pcr-slider {
+	transition: box-shadow 0.3s;
 }
 
 .pcr-app {
@@ -77,106 +75,105 @@
         visibility: visible;
         opacity: 1;
     }
+}
 
-    .pcr-swatches {
-        display: grid;
-        align-items: center;
-        grid-template-columns: repeat(9, 1fr);
-        gap: 7px;
-    }
+.pcr-swatches {
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(9, 1fr);
+	gap: 7px;
+}
 
-	.pcr-swatch {
-		@include transparency-background;
-		position: relative;
+.pcr-swatch {
+	@include transparency-background;
+	position: relative;
+	width: 100%;
+	border-radius: $border-radius-mid;
+	cursor: pointer;
+	transition: all .15s;
+	padding-bottom: 100%;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
+		height: 100%;
+		background: currentColor;
 		border-radius: $border-radius-mid;
-		cursor: pointer;
-		transition: all .15s;
-		padding-bottom: 100%;
-
-		&:after {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: currentColor;
-			border-radius: $border-radius-mid;
-			border: 1px solid rgba(0, 0, 0, .1);
-		}
-
-		&:hover {
-			filter: brightness(1.05);
-		}
+		border: 1px solid rgba(0, 0, 0, .1);
 	}
 
-    .pcr-interaction {
-        display: flex;
-        margin-top: 10px;
-        order: 2;
-        direction: ltr;
+	&:hover {
+		filter: brightness(1.05);
+	}
+}
 
-        input {
-            font-size: 10px;
-            transition: all .15s;
-            padding: 6.5px 8px;
+.pcr-interaction {
+	display: flex;
+	margin-top: 10px;
+	order: 2;
+	direction: ltr;
 
-            &:hover {
-                filter: brightness(0.975);
-            }
-        }
+	input {
+		transition: all .15s;
 
-        .pcr-result {
-            color: #495157;
-            border-radius: 3px 0 0 3px;
-            border: 1px solid #d4dae0;
-            border-right-width: 0;
-        }
+		&:hover {
+			filter: brightness(0.975);
+		}
+	}
+}
 
-        .pcr-type.active {
-            color: #fff;
-            background: $palette-cloud-blue;
-        }
+.pcr-result {
+	font-size: 10px;
+	padding: 6.5px 8px;
+	color: #495157;
+	border-radius: 3px 0 0 3px;
+	border: 1px solid #d4dae0;
+	border-right-width: 0;
+}
 
-        .pcr-save {
-            background: $palette-cloud-blue;
-        }
-    }
+.pcr-type.active {
+	color: #fff;
+	background: $palette-cloud-blue;
+}
 
-    .pcr-clear {
-        width: auto;
-        text-transform: uppercase;
-        border-radius: 0 3px 3px 0;
-        background-color: #D5DADF;
-        color: #6D7882;
-        font-family: $font-family;
-        cursor: pointer;
-    }
+.pcr-save {
+	background: $palette-cloud-blue;
+}
 
-    .pcr-selection {
+.pcr-clear {
+	width: auto;
+	font-size: 9px;
+	padding: 0 12.5px;
+	text-transform: uppercase;
+	border-radius: 0 3px 3px 0;
+	background-color: #D5DADF;
+	color: #6D7882;
+	font-family: $font-family;
+	cursor: pointer;
+}
 
-        .pcr-picker {
-            position: absolute;
-            height: 18px;
-            width: 18px;
-            border: 2px solid #fff;
-            border-radius: 100%;
-            user-select: none;
-        }
+.pcr-picker {
+	position: absolute;
+	height: 18px;
+	width: 18px;
+	border: 2px solid #fff;
+	border-radius: 100%;
+	user-select: none;
+}
 
-        .pcr-color-palette,
-        .pcr-color-chooser,
-        .pcr-color-opacity {
-            position: relative;
-            user-select: none;
-            display: flex;
-            flex-direction: column;
-            cursor: grab;
+.pcr-color-palette,
+.pcr-color-chooser,
+.pcr-color-opacity {
+	position: relative;
+	user-select: none;
+	display: flex;
+	flex-direction: column;
+	cursor: grab;
 
-            &:active {
-                cursor: grabbing;
-            }
-        }
-    }
+	&:active {
+		cursor: grabbing;
+	}
 }
