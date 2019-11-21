@@ -520,9 +520,6 @@ class Pickr {
 
         _root.button.classList.add('clear');
 
-        if (!options.showAlways) {
-            this.hide();
-        }
 
         this._lastColor = null;
         if (!this._initializingActive && !silent) {
