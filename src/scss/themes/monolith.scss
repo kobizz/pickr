@@ -15,9 +15,15 @@
     }
 
     .pcr-color-palette {
-        @include transparency-background;
         height: 170px;
         margin-top: 15px;
+		overflow: hidden;
+
+		.pcr-picker {
+			height: 13px;
+			width: 13px;
+			box-shadow: 0 0 0 2px #fff inset, 1px 1px 6px rgba(0,0,0,0.4);
+		}
 
         .pcr-palette {
             height: 100%;
@@ -26,7 +32,7 @@
 
     .pcr-color-chooser,
     .pcr-color-opacity {
-        height: 9px;
+        height: 10px;
         margin-top: 0.75em;
         border-radius: 4px;
 
@@ -37,7 +43,8 @@
 
         .pcr-slider {
             flex-grow: 1;
-            border-radius: 4px;
+            border-radius: 5px;
+			box-shadow: 0 0 0 1px rgba(0,0,0,.2) inset;
         }
     }
 
