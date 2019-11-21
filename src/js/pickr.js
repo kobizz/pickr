@@ -515,7 +515,7 @@ class Pickr {
 
         // Change only the button color if it isn't customized
         if (!options.useAsButton) {
-            _root.button.style.color = 'rgba(0, 0, 0, 0.15)';
+            _root.button.style.color = 'transparent';
         }
 
         _root.button.classList.add('clear');
