@@ -520,8 +520,10 @@ class Pickr {
 
         _root.button.classList.add('clear');
 
+        _root.interaction.result.value = '';
 
         this._lastColor = null;
+
         if (!this._initializingActive && !silent) {
 
             // Fire listener
