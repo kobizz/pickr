@@ -15,6 +15,7 @@
     }
 
     .pcr-color-palette {
+        @include transparency-background;
         height: 170px;
         margin-top: 15px;
 		overflow: hidden;
