@@ -1,4 +1,4 @@
-<h1 align="center">
+ <h1 align="center">
     <img src="https://user-images.githubusercontent.com/30767528/57573928-1e78db80-7430-11e9-940c-aecbf3226b7c.png" alt="Logo">
 </h1>
 
@@ -21,9 +21,13 @@
      src="https://data.jsdelivr.com/v1/package/npm/@simonwep/pickr/badge"></a>
   <img alt="Current version"
        src="https://img.shields.io/github/tag/Simonwep/pickr.svg?color=3498DB&label=version&style=flat-square">
-  <a href="https://www.patreon.com/simonwep"><img
+  <a href="https://github.com/sponsors/Simonwep"><img
      alt="Support me"
-     src="https://img.shields.io/badge/patreon-support-3498DB.svg?style=popout-square"></a>
+     src="https://img.shields.io/badge/github-support-3498DB.svg?style=popout-square"></a>
+  <a href="https://gitpod.io/#https://github.com/Simonwep/pickr"><img
+     alt="Gitpod Ready-to-Code"
+     src="https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod&style=popout-square"
+     /></a>
 </p>
 
 <br>
@@ -58,7 +62,7 @@
 * Responsive and auto-positioning
 * Supports touch devices
 * Swatches for quick-selection
-* Fully accessible 
+* Fully accessible
 * [Shadow-dom support](#selection-through-a-shadow-dom)
 
 ### Themes
@@ -96,7 +100,7 @@ import Pickr from '@simonwep/pickr/dist/pickr.es5.min';
 ```
 ---
 
-> Attention: The es5-bundle (e.g. legacy version) is quite big (around a triple of the modern bundle). 
+> Attention: The es5-bundle (e.g. legacy version) is quite big (around a triple of the modern bundle).
 > Please take into consideration to use the modern version and add polyfills later to your final bundle!
 > (Or better: give a hint to users that they should use the latest browsers)
 
@@ -226,7 +230,7 @@ const pickr = new Pickr({
     // If true, appendToBody will also be automatically true.
     useAsButton: false,
 
-    // Size of gap between pickr (widget) and the corresponding reference (button) in px 
+    // Size of gap between pickr (widget) and the corresponding reference (button) in px
     padding: 8,
 
     // If true pickr won't be floating, and instead will append after the in el resolved element.
@@ -258,7 +262,7 @@ const pickr = new Pickr({
     // If set to false it would directly apply the selected color on the button and preview.
     comparison: true,
 
-    // Default color. If you're using a named color such as red, white ... set 
+    // Default color. If you're using a named color such as red, white ... set
     // a value for defaultRepresentation too as there is no button for named-colors.
     default: '#42445a',
 
