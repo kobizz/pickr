@@ -561,7 +561,7 @@ class Pickr {
     /**
      * Appends a color to the swatch palette
      * @param color
-     * @returns {boolean}
+     * @returns {Element | boolean}
      */
     addSwatch(color) {
         const {values} = this._parseLocalColor(color);
@@ -588,7 +588,7 @@ class Pickr {
                 })
             );
 
-            return true;
+            return el;
         }
 
         return false;
