@@ -359,6 +359,7 @@ class Pickr {
 
             // User input
             _.on(_root.interaction.result, ['keyup', 'input'], e => {
+                this._recalc = false;
 
                 // Fire listener if initialization is finish and changed color was valid
                 if (this.setColor(e.target.value, true) && !this._initializingActive) {
