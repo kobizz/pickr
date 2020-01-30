@@ -7,7 +7,7 @@ export default function Selectable(opt = {}) {
         elements: []
     }, opt);
 
-    const onTap = _.on(opt.elements, 'click', evt => {
+    const onTap = _.on(opt.elements, [ 'click', 'change' ], evt => {
         opt.elements.forEach(e =>
             e.classList[evt.target === e ? 'add' : 'remove'](opt.className)
         );
