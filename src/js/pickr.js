@@ -818,7 +818,7 @@ class Pickr {
 
         // Find button with given type and trigger click event
         return !!this._root.interaction.options
-            .find(v => v.getAttribute('data-type').startsWith(type) && !v.dispatchEvent(new Event('change')));
+            .find(v => v.getAttribute('data-type').startsWith(type) && v.dispatchEvent(new Event('change')));
     }
 
     /**
